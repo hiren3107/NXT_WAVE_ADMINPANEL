@@ -4,6 +4,7 @@ import { addDoc, collection, doc, updateDoc } from 'firebase/firestore'
 import { useDispatch, useSelector } from 'react-redux'
 import { getData, updateData } from '../Redux/Reducers/ProductReducer/action'
 
+
 function ProductForm() {
     var dispatch = useDispatch()
     let [obj, setobj] = useState({
@@ -78,7 +79,7 @@ function ProductForm() {
             <input type="text" id='productInput' required placeholder='Product Title' onChange={change} name='Title' value={obj.Title} />    <br /> <br />
             <input type="text" id='productInput' required placeholder='Product Price' onChange={change} name='price' value={obj.price} />    <br /> <br />
             <input type="text" id='productInput' required placeholder='Product URL ' onChange={change} name='URL' value={obj.URL} />    <br /> <br />
-            <input type="submit" id='productInputBtn' value={localStorage.getItem("chako") ? 'Edite' : 'Submit'} className='  border p-[5px]   rounded-[10px] ' />
+            <input type="submit" id='productInputBtn' value={localStorage.getItem("chako") ? 'Edite' : 'Add Product'} className='  border p-[5px]   rounded-[10px] ' />
 
         </form>
     </div>

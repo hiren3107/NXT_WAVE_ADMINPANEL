@@ -2,6 +2,9 @@ import { useState } from 'react';
 import './App.css'
 import MainRouts from './Routs/MainRouts'
 import { Link, useNavigate } from 'react-router-dom';
+import hiren from './assets/hh.png'
+import h from './assets/h.png'
+
 
 function App() {
 
@@ -47,7 +50,7 @@ function App() {
 
             <Link to={'/'}>
             <div id="Logo" className="w-[100%] h-[80px] flex justify-center items-center">
-              <img src="src\assets\hh.png" className='' alt="" />
+              <img src={hiren} className='' alt="" />
             </div>
 
           </Link>
@@ -122,18 +125,13 @@ function App() {
           </div> : <div id="minidiv">
 
 
-            <button
-              id="bt"
-              className="sm:absolute lg:left-[-95%] absolute lg:hidden top-[0] right-[0]"
-              onClick={toggleSidebar}
-            >
+            <button id="bt"className="sm:absolute lg:left-[-95%] absolute lg:hidden top-[0] right-[0]"onClick={toggleSidebar}>
               ❌
             </button>
             <Link to={'/'}>
-
             <div id="Logo" className="w-[100%] h-[80px] flex   justify-center items-center">
               {/* <i className="fa-regular fa-chess-king text-[35px] "></i> */}
-              <img src="src\assets\h.png" alt="" />
+              <img src={h} alt="" />
             </div>
             </Link>
 
@@ -145,42 +143,30 @@ function App() {
             </div>
 
             {/* Register........................... */}
+
             <div id="Registerr" className="w-[100%] h-[80px] flex   justify-center items-center">
             <Link to={'/login'}>
               <i className="fa-solid fa-user text-[24px]"></i>
               </Link>
-
             </div>
-
-
             {/* Items........................... */}
+
             <div id="Itemss" className="w-[100%] h-[80px] flex   justify-center items-center">
             <Link to={'/product'}>
               <i className="fa-solid fa-qrcode text-[24px]"></i>
-
               </Link>
             </div>
-
             {/* User........................... */}
             <div id="Userss" className="w-[100%] h-[80px] flex   justify-center items-center">
               <Link to={'/user'}>
               <i className="fa-solid fa-users text-[24px]"></i>
-
               </Link>
-
-
             </div>
-
-
-
-
           </div>
           }
-
-
         </div>
 
-        {/* ................................................................. */}
+
 
         {/* Main Content Section */}
         <div
@@ -220,35 +206,8 @@ function App() {
                     <i class="fa-solid fa-magnifying-glass text-[15px]" id='searchicon'></i>
                     <input className='w-[70%] h-[30px]  sm:w-[90%] sm:ms-[5px]  lg:h-[35px] lg:w-[300px] text-[1.3vw]' id='appinput' type="text" placeholder='Search' /> </div>
                     </div>
-        
-                    {/* <div className="gol hidden ">
-                    <div className="gol1">
-                        <i className="fa-regular fa-star" id="golicon"></i>
-                    </div>
-                    <div className="gol1">
-                        <i className="fa-solid fa-moon" id="golicon"></i>
-                    </div>
-                    <div className="gol1">
-                        <i className="fa-solid fa-bell" id="golicon"></i>
-                    </div>
-                </div> */}
-                  {/* <div className='flex items-center w-[120px] lg:w-[125px] xl:w-[200px]'>
-                    <i id='icon2' class="  hidden ms-2 lg:ms-0 text-center fa-regular fa-star md:text-[2vw]  lg:text-[1.6vw] lg: text-[2.4vw]"></i>
-                    <i id='icon2' class="  hidden ms-2 lg:ms-4 lg:pt-[0.5vw] pt-[1vw] text-center fa-solid fa-moon md:text-[2vw]"></i>
-                    <i id='icon2' class="  hidden ms-2 lg:ms-4 lg:pt-[0.5vw] pt-[1vw] text-center fa-solid fa-bell md:text-[2vw]"></i>
-                  </div> */}
-        
-        
         <div className='flex h-[100%]  justify-center items-center' >
         
-        
-        
-                  {/* <div className='ms-[4vw] hidden sm:block w-[44px] h-[80%] rounded-[50%] bg-[#3E3E42] sm:flex lg:flex items-center justify-center uppercase' > 
-                   
-                  </div> */}
-                  {/* <div className=' w-[100px] rounded-[10px]  hidden  h-[80%] bg-[#3E3E42] sm:flex justify-center items-center ms-[10px] '>
-                    {localStorage.getItem("isUser")?localStorage.getItem("isUser"):"User"}
-                  </div> */}
                   <div class="babo">
                     <div className='ms-[4vw] hidden sm:block w-[44px] h-[44px] rounded-[15px] bg-[#3E3E42] sm:flex lg:flex items-center justify-center uppercase'>
                     {localStorage.getItem("isUser")?localStorage.getItem("isUserEmail"):"🧑‍💻"}
@@ -278,13 +237,6 @@ function App() {
         <MainRouts/>
   
 </div>
-          {/* {Ii ? <ItemsForm /> : (usee ? <User /> : (reg ? <Login /> : <Data />))} */}
-          {/* {Ii ? <ItemsForm /> : (usee ? <User /> : (reg ? <Login /> : <Data />))} */}
-          {/* {Ii ? <ItemsForm /> : (usee ? <User /> : (reg ? <Login /> : <Data />))} */}
-
-          {/* {Ii ? <ItemsForm /> :  usee ? <User />  : reg  ? < Login />   : <Data />   } */}
-
-
         </div>
       </div>
 

@@ -4,6 +4,7 @@ import { addDoc, collection } from 'firebase/firestore'
 import { useDispatch, useSelector } from 'react-redux'
 import { getDataUser, updateDataUser } from '../Redux/Reducers/LoginReducer/action'
 import { Link, useNavigate } from 'react-router-dom'
+import goog from '../assets/googel.png'
 
 function Signup() {
  var dispatch = useDispatch()
@@ -173,7 +174,7 @@ return (
           <input className='signupinputbtn' type="submit" value={ localStorage.getItem("chaki") ? 'Edite': 'Submit' }/>
               <p className='mb-[10px]' id='ce'>OR</p>
           <div id='gg' onClick={handelAuth} className='googel text-center flex'>
-            <img src="src\assets\googel.png" className='w-[25px] h-[25px] me-[20px]' alt="" />
+            <img src={goog} className='w-[25px] h-[25px] me-[20px]' alt="" />
             Sign in with Google</div>
           <Link to={'/login'} className='center'> <p className="center mt-[20px]" id='alreadyaccountcss'>Account Already Exist</p></Link>
     </form>

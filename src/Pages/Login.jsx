@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { auth, db, googleAuth } from '../Firebase/fire'
 import { useDispatch, useSelector } from 'react-redux'
+import goog from '../assets/googel.png'
 
 function Login() {
   
@@ -89,7 +90,7 @@ return (
               <input required className='lohinput' type="text" name='logpass' placeholder='Enter Your Password'onChange={loghandel}/>
               <input className='lohinputbtn' type="submit" value="Login"/>
               <div onClick={handelAuth} className='googel'>
-            <img src="src\assets\googel.png" className='w-[25px] h-[25px] me-[20px]' alt="" />
+            <img src={goog} className='w-[25px] h-[25px] me-[20px]' alt="" />
                 Sign in with Google</div>
               <p className='mb-[10px] mt-[10px]'>OR</p>
               <Link to={'/signup'} id='alcc'>Creat New Account</Link>

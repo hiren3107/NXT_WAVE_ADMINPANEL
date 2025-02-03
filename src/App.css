@@ -356,14 +356,14 @@ body{
   .skeleton-container {
     width: 100%;
     padding: 20px;
-    background-color: #fff;
+    background-color: #28282A;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 25px;
   }
   
   .skeleton {
-    background-color: #e0e0e0;
+    background-color: #28282A;
     border-radius: 4px;
     margin-bottom: 16px;
     position: relative;
@@ -396,7 +396,7 @@ body{
   
   .skeleton {
     animation: loading 1.5s infinite linear;
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background: linear-gradient(90deg, #828080 25%, #646262 50%, #525252 75%);
     background-size: 200% 100%;
   }
 
