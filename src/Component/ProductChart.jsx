@@ -51,13 +51,16 @@ const ProductChart = () => {
     <div className="container mx-auto px-4 py-10">
       <h2 className="text-2xl font-bold text-center mb-6">Product Sales Charts</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
         {/* Bar Chart */}
+
         <div className="w-full bg-white p-4 rounded-lg shadow-lg h-[300px] md:h-[400px]">
           <h3 className="text-lg font-semibold mb-4">Sales Bar Chart</h3>
           <Bar data={data} options={options} />
         </div>
 
         {/* Line Chart */}
+
         <div className="w-full bg-white p-4 rounded-lg shadow-lg h-[300px] md:h-[400px]">
           <h3 className="text-lg font-semibold mb-4">Sales Line Chart</h3>
           <Line data={data} options={options} />

@@ -3,9 +3,9 @@ import { productReducer } from "./Reducers/ProductReducer/productReducer";
 import { loginReducer } from "./Reducers/LoginReducer/loginReducer";
 import { thunk } from "redux-thunk";
 
-var allReducer = combineReducers( {
+var allReducer = combineReducers({
     productReducer,
     loginReducer
 })
 
-export const hiren = legacy_createStore(allReducer,applyMiddleware(thunk))
+export const hiren = legacy_createStore(allReducer, applyMiddleware(thunk))

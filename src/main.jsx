@@ -7,10 +7,10 @@ import { hiren } from './Redux/Store'
 
 createRoot(document.getElementById('root')).render(
     <Provider store={hiren}>
-<BrowserRouter>
-    <App />
-</BrowserRouter>
-</Provider>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </Provider>
 )
 
 

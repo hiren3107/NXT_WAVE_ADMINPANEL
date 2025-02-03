@@ -19,67 +19,54 @@ function UserData() {
 
     console.log(dataa.isLoding);
 
-    function handelDelet(delId){
+    function handelDelet(delId) {
         console.log(delId);
         dispatch(deleteDataUser(delId))
-      }
-      
-    function handelEdite(editeId){
+    }
+
+    function handelEdite(editeId) {
         // console.log(editeId);
-        localStorage.setItem("userEditId",editeId)
-        localStorage.setItem("chaki",true)
-
-        // alert("ALERT")
+        localStorage.setItem("userEditId", editeId)
+        localStorage.setItem("chaki", true)
         navigat("/user")
-      }
+    }
 
-      const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-      const openModal = (e) => {
-          //    setview([e]);
-          console.log(e);
-          let ss = dataa.user.filter((el) => {
-  
-              if (el.id == e) {
-  
-                  return el
-              }
-          })
-  
-          setview(ss)
-          console.log(view);
-  
-  
-  
-          setIsModalOpen(true);
-      }
-      const closeModal = () => setIsModalOpen(false);
-  
+    const openModal = (e) => {
+        console.log(e);
+        let ss = dataa.user.filter((el) => {
+            if (el.id == e) {
+                return el
+            }
+        })
 
-      
-  return (
-    <div className='w-[100%] h-[700px] mt-[130px]'>
+        setview(ss)
+        console.log(view);
+        setIsModalOpen(true);
+    }
+    const closeModal = () => setIsModalOpen(false);
+
+    return (
+        <div className='w-[100%] h-[700px] mt-[130px]'>
             <div className='rounded-[10px] w-[100%] border overflow-y-auto'>
-            <div className="w-full h-[75px] flex items-center justify-between bg-[#181819] p-5 border-b">
+                <div className="w-full h-[75px] flex items-center justify-between bg-[#181819] p-5 border-b">
                     <h1 className="text-[25px] font-bold">User Details</h1>
-                    <button 
-                        onClick={() => navigat("/signup")} 
+                    <button
+                        onClick={() => navigat("/signup")}
                         className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
                         Add User
                     </button>
                 </div>
 
                 <div className='p-[20px] w-[1500px] 2xl:w-[100%] '>
-                   <div className="bg-[#364153] w-full h-[80px] border flex justify-between items-center p-4">
+                    <div className="bg-[#364153] w-full h-[80px] border flex justify-between items-center p-4">
                         <div className="w-[10%] flex justify-center">
                             <h1 className="text-lg font-medium">User Name</h1>
                         </div>
                         <div className="w-[18%] flex justify-center">
                             <h1 className="text-lg font-medium">User Email</h1>
                         </div>
-                        {/* <div className="w-[15%] flex justify-center">
-                            <h1 className="text-lg font-medium">Product Price</h1>
-                        </div> */}
                         <div className="w-[10%] flex justify-center">
                             <h1 className="text-lg font-medium">Edit</h1>
                         </div>
@@ -109,9 +96,6 @@ function UserData() {
                                     <div className="w-[18%] flex justify-center">
                                         <h1 className="text-lg">{el.email}</h1>
                                     </div>
-                                    {/* <div className="w-[15%] flex justify-center">
-                                        <h1 className="text-lg">₹{el.pass}</h1>
-                                    </div> */}
                                     <div className="w-[10%] flex justify-center">
                                         <button
                                             onClick={() => handelEdite(el.id)}
@@ -145,12 +129,11 @@ function UserData() {
 
 
                     <div className='w-[450px] bg-[#171717] h-[450px] flex flex-wrap justify-center items-evenly border-1'>
-                        {/* <img src={view[0].URL} alt="" className='absolute mt-[1%] mb-[1%]  w-[250px] h-[230px] z-30 ' /> */}
                         <div className='absolute mt-[1%] mb-[1%] mt-[50px]  w-[160px] h-[160px] z-30 border flex-wrap justify-center items-center rounded-[50%]'>
-                            <p className='text-[100px] uppercase text-center'>{view[0].email.slice(0,2)}</p>
+                            <p className='text-[100px] uppercase text-center'>{view[0].email.slice(0, 2)}</p>
                         </div>
                         <div className='w-[100%] mt-[50%] h-[5%]  flex items-center justify-center   z-20 '>
-                           <p className=''> {view[0].user} </p>
+                            <p className=''> {view[0].user} </p>
                         </div>
                         <div className='w-[100%] ms-3  h-[5%] flex items-center justify-center'>
                             {view[0].email}
@@ -172,8 +155,9 @@ function UserData() {
                     <div style={modalStyle}>
 
                         {/* Close button */}
+
                         <button onClick={closeModal} style={closeButtonStyle}>
-                        <i class="fa-solid fa-xmark text-[red]"></i>
+                            <i class="fa-solid fa-xmark text-[red]"></i>
 
                         </button>
                     </div>
@@ -181,7 +165,7 @@ function UserData() {
             )}
         </div>
 
-  )
+    )
 }
 
 const modalBackdropStyle = {
