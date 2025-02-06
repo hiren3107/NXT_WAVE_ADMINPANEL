@@ -24,16 +24,16 @@ A Modern And Responsive React Admin Panel With Full CRUD Functionality, Secure A
 
 ## Installation
 
-sh
+```sh
 git clone https://github.com/hiren3107/NXT_WAVE_ADMINPANEL
 cd nxt_wave_adminpanel
 npm install
 npm run dev
-
+```
 
 ## Dependencies
 Here is a list of key dependencies and their versions used in this project:
-sh
+```sh
 npm install react
 npm install react-dom
 npm install react-router-dom
@@ -43,7 +43,7 @@ npm install tailwindcss
 npm install firebase
 npm install chart.js
 npm install counterup.js
-
+```
 ## Usage
 
 1. Run npm run dev to launch the development server.
