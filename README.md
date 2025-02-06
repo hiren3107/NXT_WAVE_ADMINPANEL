@@ -16,7 +16,7 @@ A Modern And Responsive React Admin Panel With Full CRUD Functionality, Secure A
 
 ## Screenshot
 
-![Admin Panel Screenshot](https://drive.google.com/file/d/1RqDdSJSPodUZM3HEfDitebo7paqmnrNM/view?usp=sharing)
+![Admin Panel Screenshot](https://drive.google.com/file/d/1RqDdSJSPodUZM3HEfDitebo7paqmnrNM/view?usp=sharing) 
 
 ## Live URL
 
